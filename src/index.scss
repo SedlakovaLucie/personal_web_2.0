@@ -1,0 +1,33 @@
+//CSS RESET
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  //scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+//Global styles
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: font-weight(regular);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-size: font-size(md);
+  max-width: 1240px;
+  margin: 0 auto;
+  transition: $default-transition;
+}

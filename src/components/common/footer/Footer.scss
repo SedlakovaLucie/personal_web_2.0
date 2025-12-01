@@ -1,0 +1,29 @@
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: space(2);
+
+  .logo-animated {
+    transition: fill 0.5s ease;
+  }
+
+  @include max(sm) {
+    flex-direction: column;
+    gap: space(3);
+
+    // změna pořadí
+    .footer-lang {
+      order: 2;
+    }
+    .footer-logo-wrapper {
+      order: 1;
+    }
+    .footer-text {
+      order: 3;
+    }
+    .logo {
+      height: 35px;
+    }
+  }
+}

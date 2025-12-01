@@ -1,0 +1,17 @@
+.form-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: space(6);
+  margin: space(6) space(2);
+  width: auto;
+  max-width: 100%;
+
+  @include max(md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-input,
+.form-result {
+  min-width: 0;
+}

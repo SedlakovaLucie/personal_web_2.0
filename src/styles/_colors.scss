@@ -1,0 +1,32 @@
+@use "./variables" as *;
+
+// --- Variables ---
+// variables LIGHT mode
+:root {
+  --color-bg: #{$color-bg-light};
+  --color-footer: #{$color-footer-light};
+  --color-text-1: #{$color-text-muted}; //z hnědé na žlutou
+  --color-text-2: #{$color-text}; //z bílé na žlutou
+  --color-text-3: #{$color-text-muted}; //z hnědé na bílou
+  --color-text-4: #{$color-text}; //z bílé na hnědou
+  //neměnící se barvy
+  --color-text: #{$color-text}; //bílá
+  --color-text-secondary: #{$color-text-secondary}; //žlutá
+  --color-text-muted: #{$color-text-muted}; //světle hnědá
+  //toggle
+  --icon-fill: #{$icon-fill-light};
+  --icon-fill-hover: #{$icon-fill-hover-light};
+}
+
+// variables DARK mode
+[data-theme="dark"] {
+  --color-bg: #{$color-bg-dark};
+  --color-footer: #{$color-footer-dark};
+  --color-text-1: #{$color-text-secondary}; //z hnědé na žlutou
+  --color-text-2: #{$color-text-secondary}; //z bílé na žlutou
+  --color-text-3: #{$color-text}; //z hnědé na bílou
+  --color-text-4: #{$color-text-muted}; //z bílé na hnědou
+  //toggle
+  --icon-fill: #{$icon-fill-dark};
+  --icon-fill-hover: #{$icon-fill-hover-dark};
+}

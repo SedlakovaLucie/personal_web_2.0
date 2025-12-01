@@ -1,0 +1,52 @@
+{
+  "footer": {
+    "text": "| Lucie Jagošová"
+  },
+  "languages": {
+    "cs": {
+      "label": "Čeština",
+      "alt": "Jazyk čeština"
+    },
+    "en": {
+      "label": "Angličtina",
+      "alt": "Jazyk angličtina"
+    }
+<<<<<<< HEAD
+=======
+  },
+  "main_page": {
+    "hero": {
+      "title": "Investiční kalkulačka",
+      "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+    },
+    "calculator": {
+      "result_button": "Vypočítej",
+      "result_text": "Výsledná částka",
+      "inputs": {
+        "initial_investment": {
+          "label": "Počáteční investice",
+          "suffix": "Kč",
+          "tooltip": "Celková částka, kterou investujete na začátku."
+        },
+        "regular_investment": {
+          "label": "Pravidelná investice",
+          "suffix": "Kč",
+          "tooltip": "Částka, kterou budete investovat každý měsíc."
+        },
+        "interest_rate": {
+          "label": "Úroková sazba",
+          "suffix": "%",
+          "tooltip": "Roční výnos vašeho investovaného kapitálu."
+        },
+        "years": {
+          "label": "Délka investice",
+          "suffix_one": "rok",
+          "suffix_few": "roky",
+          "suffix_other": "let",
+          "tooltip": "Celková délka investování."
+        }
+      }
+    }
+>>>>>>> 9a0b20a119c7c2d9c26af61a9850b3adf55b9cbe
+  }
+}

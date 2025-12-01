@@ -1,0 +1,35 @@
+@use "./variables" as *;
+
+// Font-size function
+@function font-size($key) {
+  @if map-has-key($font-size-scale, $key) {
+    @return map-get($font-size-scale, $key);
+  }
+  @error "Unknown font-size key `#{$key}`. Check your $font-size-scale map.";
+}
+
+// Spacing function
+@function space($key) {
+  @if map-has-key($space-scale, $key) {
+    @return map-get($space-scale, $key);
+  }
+  @error "Unknown spacing key `#{$key}`. Check your $space-scale map.";
+}
+
+//font-weight
+@function font-weight($key) {
+  @if map-has-key($font-weight-scale, $key) {
+    @return map-get($font-weight-scale, $key);
+  }
+  @error "Unknown font-weight `#{$key}`. Check your $font-weight-scale map.";
+}
+
+
+//breakpoints
+@function breakpoint($key) {
+  @if map-has-key($breakpoints, $key) {
+    @return map-get($breakpoints, $key);
+  }
+
+  @error "Unknown breakpoint `#{$key}`. Check your $breakpoints map.";
+}

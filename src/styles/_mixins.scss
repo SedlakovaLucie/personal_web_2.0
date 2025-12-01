@@ -1,0 +1,35 @@
+@use "@/styles/variables" as *;
+@use "@/styles/functions" as *;
+
+//---Breakpointy---
+
+// max-width
+@mixin max($key) {
+  @media (max-width: breakpoint($key)) {
+    @content;
+  }
+}
+
+// min-width
+@mixin min($key) {
+  @media (min-width: breakpoint($key)) {
+    @content;
+  }
+}
+
+// between
+@mixin between($min, $max) {
+  @media (min-width: breakpoint($min)) and (max-width: breakpoint($max)) {
+    @content;
+  }
+}
+
+/* //použití breakpointu
+.box {
+  color: black;
+
+  @include max(sm) {
+    color: red;
+  }
+}
+ */
