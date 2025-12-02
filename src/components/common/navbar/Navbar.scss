@@ -27,6 +27,10 @@
         border-bottom: 2px solid transparent;
         transition: border-color 0.4s ease, color 0.4s ease;
 
+        &:hover:not(.active) {
+          color: var(--color-text-1);
+        }
+
         &.active {
           border-color: currentColor;
         }
@@ -39,6 +43,7 @@
       justify-self: end;
       display: flex;
       align-items: center;
+      gap: space(1);
     }
 
     /* breakpoint mobil */

@@ -66,7 +66,7 @@ $space-scale: (
   //48px
   10: 3.5rem,
   //56px
-  11: 4rem //64px,,,
+  11: 4rem //64px
 );
 
 //---Box-shadow---
@@ -79,35 +79,25 @@ $border-radius-card: 16px;
 // --Transition--
 $default-transition: background-color 0.5s ease, color 0.5s ease;
 
-//---Colors---
+//---------COLORS-----------
 //neměnící se barvy
 $color-text: #fff; //bílá
 $color-text-secondary: #ffc300; //žlutá
 $color-text-muted: #605f5f; //světle hnědá
 $color-text-dark: #333333; //tmavě hnědá
+
+//--------------------------
 // LIGHT theme
 $color-bg-light: #ffc300;
 $color-footer-light: rgba(#fff, 0.8);
-
-// Stejné pro light i dark
-$brand-bg-color: #e0f54a;
-$brand-text-color: #25303a;
-$input-border-color: #e5e7eb;
-$error-color: #ef4444;
-
-// LIGHT theme
-$font-color-light: #25303a;
-$bg-color-light: #fff;
-$card-bg-color-light: #f9f9f9;
-$color-hover-light: darken($bg-color-light, 8%);
 //toggle
 $icon-fill-light: #333333;
 $icon-fill-hover-light: #605f5f;
 
+//--------------------------
 // DARK theme
 $color-bg-dark: #333333;
 $color-footer-dark: #605f5f;
-
 //toggle
 $icon-fill-dark: #fff;
 $icon-fill-hover-dark: #605f5f;

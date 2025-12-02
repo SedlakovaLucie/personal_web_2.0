@@ -8,5 +8,10 @@
     "portfolio": "Projects",
     "career": "Carreer",
     "contact": "Contact"
+  },
+  "home_page": {
+    "h1_text": "Hello, I'm Lucie",
+    "hero_text_1": "front-end",
+    "hero_text_2": "developer"
   }
 }

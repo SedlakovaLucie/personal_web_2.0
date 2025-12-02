@@ -1,0 +1,86 @@
+.hero-wrapper {
+  font-family: "Jersey 25", sans-serif;
+  text-transform: uppercase;
+  line-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 150px;
+
+  /* text */
+  .home-page-h1 {
+    font-size: 110px;
+    color: var(--color-text);
+  }
+
+  .home-page-p {
+    font-size: 90px;
+    color: var(--color-text-1);
+  }
+
+  .typewriter {
+    position: relative;
+    white-space: pre-line;
+  }
+
+  .typewriter::after {
+    content: "|";
+    position: absolute;
+    right: -0.1em;
+    animation: caret-blink 0.7s steps(1) infinite;
+  }
+
+  /* tečky = odkazy */
+  .hero-dots {
+    margin-top: space(6);
+    display: flex;
+    justify-content: center;
+    gap: space(5);
+  }
+
+  .hero-dot {
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-radius: 50%;
+    border: 2px solid var(--color-text);
+    background: transparent;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+
+    &:hover:not(.hero-dot--active) {
+      border-color: var(--color-text-1);
+    }
+  }
+
+  .hero-dot--active {
+    background: var(--color-text);
+    border-color: var(--color-text);
+  }
+
+  /* breakpoints */
+  @include max(md) {
+    padding-top: 70px;
+    line-height: 60px;
+
+    .home-page-h1 {
+      font-size: 50px;
+    }
+
+    .home-page-p {
+      font-size: 40px;
+    }
+  }
+}
+
+@keyframes caret-blink {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}

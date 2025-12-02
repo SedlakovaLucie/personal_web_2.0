@@ -1,11 +1,11 @@
 import "./App.scss";
 import { Routes, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import SkillsPage from "./pages/SkillsPage";
-import PortfolioPage from "./pages/PortfolioPage";
-import CarrerPage from "./pages/CarrerPage";
-import ErrorPage from "./pages/ErrorPage";
-import ContactPage from "./pages/ContactPage";
+import HomePage from "./pages/homePage/HomePage";
+import SkillsPage from "./pages/skills/SkillsPage";
+import PortfolioPage from "./pages/portfolio/PortfolioPage";
+import CarrerPage from "./pages/career/CarrerPage";
+import ErrorPage from "./pages/errorPage/ErrorPage";
+import ContactPage from "./pages/contact/ContactPage";
 import Layout from "./layout/Layout";
 
 const App = () => {

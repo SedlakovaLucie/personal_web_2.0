@@ -8,5 +8,10 @@
     "portfolio": "Projekty",
     "career": "Kariéra",
     "contact": "Kontakt"
+  },
+  "home_page": {
+    "h1_text": "Ahoj, já jsem Lucie",
+    "hero_text_1": "vývojářka",
+    "hero_text_2": "front-endu"
   }
 }
