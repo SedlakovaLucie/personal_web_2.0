@@ -1,29 +1,27 @@
 .footer-container {
+  color: var(--color-footer);
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   padding: space(2);
+  gap: space(1);
 
-  .logo-animated {
-    transition: fill 0.5s ease;
+  .footer-text {
+    font-size: font-size(md);
   }
 
-  @include max(sm) {
-    flex-direction: column;
+  .footer-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: space(3);
 
-    // změna pořadí
-    .footer-lang {
-      order: 2;
+    .footer-icon {
+      width: 20px;
+      color: var(--color-footer); 
     }
-    .footer-logo-wrapper {
-      order: 1;
-    }
-    .footer-text {
-      order: 3;
-    }
-    .logo {
-      height: 35px;
-    }
+     a:hover .footer-icon {
+    color: var(--color-text-1);
+  }
   }
 }

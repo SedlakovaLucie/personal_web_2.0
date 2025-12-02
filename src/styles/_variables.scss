@@ -20,7 +20,7 @@ $font-size-scale: (
   //36px
   "5xl": 3rem,
   //48px
-  "6xl": 3.75rem //60px,
+  "6xl": 3.75rem //60px,,,
 );
 
 //---Font-weight--- (Inter)
@@ -66,7 +66,7 @@ $space-scale: (
   //48px
   10: 3.5rem,
   //56px
-  11: 4rem //64px,
+  11: 4rem //64px,,,
 );
 
 //---Box-shadow---
@@ -80,16 +80,15 @@ $border-radius-card: 16px;
 $default-transition: background-color 0.5s ease, color 0.5s ease;
 
 //---Colors---
-<<<<<<< HEAD
 //neměnící se barvy
 $color-text: #fff; //bílá
 $color-text-secondary: #ffc300; //žlutá
 $color-text-muted: #605f5f; //světle hnědá
+$color-text-dark: #333333; //tmavě hnědá
 // LIGHT theme
 $color-bg-light: #ffc300;
 $color-footer-light: rgba(#fff, 0.8);
 
-=======
 // Stejné pro light i dark
 $brand-bg-color: #e0f54a;
 $brand-text-color: #25303a;
@@ -101,15 +100,14 @@ $font-color-light: #25303a;
 $bg-color-light: #fff;
 $card-bg-color-light: #f9f9f9;
 $color-hover-light: darken($bg-color-light, 8%);
->>>>>>> 9a0b20a119c7c2d9c26af61a9850b3adf55b9cbe
 //toggle
 $icon-fill-light: #333333;
-$icon-fill-hover-light: #2f3a45;
+$icon-fill-hover-light: #605f5f;
 
 // DARK theme
 $color-bg-dark: #333333;
 $color-footer-dark: #605f5f;
 
 //toggle
-$icon-fill-dark: #abb3ba;
-$icon-fill-hover-dark: #fff;
+$icon-fill-dark: #fff;
+$icon-fill-hover-dark: #605f5f;

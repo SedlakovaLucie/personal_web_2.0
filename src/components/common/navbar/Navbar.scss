@@ -1,36 +1,68 @@
 .navbar-container {
+  width: 100%;
+  position: sticky;
+  top: 0;
+
   .navbar {
-    max-width: 1000px;
     margin: 0 auto;
-    padding: space(4);
-    display: flex;
+    padding: space(2);
+    height: 120px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    justify-content: space-between;
-  }
 
-<<<<<<< HEAD
-  .navbar-center {
-    display: flex;
-    gap: 24px;
-    margin: 0 auto;
-  }
+    /* odkazy */
+    .navbar-center {
+      grid-column: 2;
+      display: flex;
+      justify-content: center;
+      gap: space(4);
 
-  .navbar-right {
-    display: flex;
-    gap: 12px;
-    margin-left: auto;
-=======
-    .logo-animated {
-      transition: fill 0.5s ease;
-    }
+      a {
+        text-decoration: none;
+        color: var(--color-text);
+        font-weight: font-weight(medium);
+        font-size: font-size(lg);
+        padding-bottom: space(1);
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.4s ease, color 0.4s ease;
 
-    @include max(sm) {
-      padding: space(2);
-
-      .logo {
-        height: 35px;
+        &.active {
+          border-color: currentColor;
+        }
       }
     }
->>>>>>> 9a0b20a119c7c2d9c26af61a9850b3adf55b9cbe
+
+    /* jazyk + toggle */
+    .navbar-right {
+      grid-column: 3;
+      justify-self: end;
+      display: flex;
+      align-items: center;
+    }
+
+    /* breakpoint mobil */
+    @include max(sm) {
+      height: auto;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      row-gap: space(3);
+      padding: space(3) space(2);
+
+      .navbar-right {
+        grid-column: 1;
+        order: 1;
+        justify-self: right;
+        padding-right: space(2);
+        gap: space(3);
+      }
+
+      .navbar-center {
+        grid-column: 1;
+        order: 2;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
   }
 }

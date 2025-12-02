@@ -40,7 +40,7 @@
 
 // dark theme styly
 
-[data-theme="dark"] {
+[data-theme="light"] {
   .sun-and-moon {
     > .sun {
       transform: scale(1.75);
@@ -57,7 +57,7 @@
 }
 
 @supports (cx: 1) {
-  [data-theme="dark"] .sun-and-moon > .moon > circle {
+  [data-theme="light"] .sun-and-moon > .moon > circle {
     cx: 17;
     transform: translateX(0);
   }
@@ -86,7 +86,7 @@
     }
   }
 
-  [data-theme="dark"] {
+  [data-theme="light"] {
     .sun-and-moon {
       > .sun {
         transition-timing-function: var(--ease-3);
