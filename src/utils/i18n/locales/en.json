@@ -17,5 +17,11 @@
   },
   "skills_page": {
     "loading": "loading..."
+  },
+  "contact_page": {
+    "hero_text": "EN Pokud jsem vás zaujala můžete mě kontaktovat prostřednictvím těchto odkazů",
+    "linkedin": "LinkedIn",
+    "email": "E-mail",
+    "github": "GitHub"
   }
 }

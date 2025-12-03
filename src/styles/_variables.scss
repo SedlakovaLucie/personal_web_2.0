@@ -72,9 +72,11 @@ $space-scale: (
 //---Box-shadow---
 $shadow-default: 0 2px 12px 0 rgba(0, 0, 0, 0.07);
 
-//---Border-radius---
-$border-radius-input: 16px;
-$border-radius-card: 16px;
+//---padding---
+//horní padding pro každou stránku
+$padding-top-xl: 150px;
+$padding-top-md: 50px;
+
 
 // --Transition--
 $default-transition: background-color 0.5s ease, color 0.5s ease;

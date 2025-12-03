@@ -1,0 +1,135 @@
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: $padding-top-xl;
+  gap: space(8);
+  text-align: center;
+
+  .contact-text {
+    max-width: 400px;
+    color: var(--color-text-4);
+    font-size: font-size("2xl");
+    line-height: 1.5;
+    margin: 0 auto;
+  }
+
+  .contact-links {
+    width: min(520px, 100% - space(6));
+    display: flex;
+    flex-direction: column;
+    gap: space(6);
+    margin-top: space(6);
+  }
+
+  .contact-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: space(3) space(4);
+    border: 2px solid var(--color-text-3);
+    border-radius: 16px;
+    box-shadow: $shadow-default;
+    color: var(--color-text-3);
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    overflow: hidden;
+
+    // výchozí stav pro animaci
+    opacity: 0;
+    transform: translateY(10px);
+    animation: contact-fade-up 0.6s ease-out forwards;
+
+    // přechody
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s ease,
+      color 0.25s ease, background-color 0.25s ease;
+
+    // hover
+    &:hover {
+      transform: translateY(-3px);
+      border-color: var(--color-text-2);
+      background-color: rgba(255, 255, 255, 0.02);
+      color: var(--color-text-2);
+    }
+
+    // --------------- levá část – ikonka + text
+    .contact-link-left {
+      display: flex;
+      align-items: center;
+      gap: space(4);
+    }
+
+    .contact-link-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 35px;
+        height: 35px;
+        fill: currentColor;
+        transition: transform 0.25s ease;
+      }
+    }
+
+    .contact-link-label {
+      font-size: font-size("lg");
+      font-weight: 500;
+    }
+
+    .contact-link-arrow {
+      font-size: font-size("2xl");
+      line-height: 1;
+      transition: transform 0.25s ease;
+    }
+
+    // ikonka a šipka hover
+    &:hover .contact-link-icon svg {
+      transform: scale(1.08);
+    }
+
+    &:hover .contact-link-arrow {
+      transform: translateX(4px);
+    }
+  }
+
+  // postupné zobrazení odshora dolů
+  .contact-link:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .contact-link:nth-child(2) {
+    animation-delay: 0.25s;
+  }
+  .contact-link:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+  // breakpoints
+  @include max(md) {
+    gap: space(4);
+    padding-top: $padding-top-md;
+
+    .contact-text {
+      font-size: font-size("xl");
+    }
+
+    .contact-link {
+      padding: space(2) space(3);
+    }
+  }
+}
+
+// animace karet
+@keyframes contact-fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 150px;
+  padding-top: $padding-top-xl;
 
   /* text */
   .home-page-h1 {
@@ -96,7 +96,7 @@
 
   /* breakpoints */
   @include max(md) {
-    padding-top: 70px;
+    padding-top: $padding-top-md;
     line-height: 60px;
 
     .home-page-h1 {
