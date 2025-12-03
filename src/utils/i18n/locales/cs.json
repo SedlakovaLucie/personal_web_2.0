@@ -12,6 +12,10 @@
   "home_page": {
     "h1_text": "Ahoj, já jsem Lucie",
     "hero_text_1": "vývojářka",
-    "hero_text_2": "front-endu"
+    "hero_text_2": "front-endu",
+    "dots": "odkaz na"
+  },
+  "skills_page": {
+    "loading": "načítání..."
   }
 }

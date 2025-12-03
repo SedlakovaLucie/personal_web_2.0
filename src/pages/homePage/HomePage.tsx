@@ -4,11 +4,11 @@ import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const DOT_ROUTES = [
-  "/",
-  "/skills",
-  "/portfolio",
-  "/career",
-  "/contact",
+  { path: "/", key: "home" },
+  { path: "/skills", key: "skills" },
+  { path: "/portfolio", key: "portfolio" },
+  { path: "/career", key: "career" },
+  { path: "/contact", key: "contact" },
 ];
 
 const MainPage = () => {
@@ -19,13 +19,14 @@ const MainPage = () => {
   const fullText = `${line1}\n${line2}`;
 
   const [index, setIndex] = useState(0);
-
   const speed = 80; // ms na znak
 
   const typed = fullText.slice(0, index);
+  const isFinished = index >= fullText.length;
 
+  // typewriter efekt
   useEffect(() => {
-    if (index > fullText.length) return;
+    if (index >= fullText.length) return;
     const timeoutId = window.setTimeout(() => {
       setIndex((prev) => prev + 1);
     }, speed);
@@ -39,22 +40,24 @@ const MainPage = () => {
         <h1 className="home-page-h1">{t("home_page.h1_text")}</h1>
 
         <p className="home-page-p">
-          <span className="typewriter">{typed}</span>
+          <span className="typewriter-homepage">{typed}</span>
         </p>
       </div>
 
-      <div className="hero-dots">
-        {DOT_ROUTES.map((path) => (
-          <NavLink
-            key={path}
-            to={path}
-            className={({ isActive }) =>
-              "hero-dot" + (isActive ? " hero-dot--active" : "")
-            }
-            aria-label={`Go to ${path}`}
-          />
-        ))}
-      </div>
+      {isFinished && (
+        <div className="hero-dots hero-dots--visible">
+          {DOT_ROUTES.map(({ path, key }) => (
+            <NavLink
+              key={path}
+              to={path}
+              className={({ isActive }) =>
+                "hero-dot" + (isActive ? " hero-dot--active" : "")
+              }
+              aria-label={`${t("home_page.dots")} ${t(`navbar.${key}`)}`}
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 };

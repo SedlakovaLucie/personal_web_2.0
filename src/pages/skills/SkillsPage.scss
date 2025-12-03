@@ -1,0 +1,80 @@
+.skills-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150px;
+  // písmo
+  font-family: "Jersey 25", sans-serif;
+  text-transform: uppercase;
+  font-size: font-size("3xl");
+
+  //------ ikony ------
+  .icons-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 700px;
+    margin: auto;
+    gap: space(9);
+
+    // bílé ikony
+    .skill-icon {
+      filter: brightness(0) invert(1);
+      transition: filter 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover {
+        filter: none; // barevné ikony při hoveru
+      }
+    }
+  }
+
+  //------ loading text + cursor ------
+  .loading-container {
+    color: var(--color-text-1);
+    letter-spacing: 35%;
+    margin-top: space(8);
+
+    .typewriter-skillpage {
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 6px;
+        height: 1em;
+        background: currentColor;
+        display: inline-block;
+        margin-left: 4px;
+        animation: blink 0.7s steps(1) infinite;
+      }
+    }
+  }
+
+  //breakpoint
+  @include max(md) {
+    padding-top: 70px;
+    font-size: font-size("2xl");
+
+    .icons-container {
+      gap: space(6);
+
+      .skill-icon {
+        width: 80px;
+        height: 55px;
+      }
+    }
+  }
+}
+
+// animace kurzoru
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
