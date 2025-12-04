@@ -1,5 +1,5 @@
 import { useState } from "react";
-import TimelineItemCard from "./card/TimelineItemCard";
+import TimelineRow from "./row/TimeLineRow";
 import "./TimeLine.scss";
 
 export type TimelineItem = {
@@ -8,9 +8,8 @@ export type TimelineItem = {
   job: boolean;
 };
 
-// ---- TimeLine roky + pozice ----
 const TIMELINE_ITEMS: TimelineItem[] = [
-  { id: "future-2026", year: 2026, job: false },
+  { id: "job3", year: 2026, job: false },
   { id: "job2", year: 2025, job: true },
   { id: "job1", year: 2023, job: true },
 ];
@@ -23,30 +22,18 @@ const TimeLine = () => {
   };
 
   return (
-    <div className="timeline">
-      {/* svislá čára + šipka, jen jednou pro celou timeline */}
-      <div className="timeline-axis-container"/>
-
-      {TIMELINE_ITEMS.map((item) => (
-        <div key={item.id} className="timeline-row">
-          {/* LEVÁ ČÁST: rok + tečka na ose */}
-          <div className="timeline-year-container">
-            <span className="timeline-year">{item.year}</span>
-            <span className="timeline-dot" />
-          </div>
-
-          {/* PRAVÁ ČÁST: karta (job nebo otazník) */}
-          <div className="timeline-card-container">
-            <TimelineItemCard
-              id={item.id}
-              job={item.job}
-              opened={item.id === openId}
-              handleToggle={() => handleToggle(item.id)}
-            />
-          </div>
-        </div>
+    <section className="timeline">
+      {TIMELINE_ITEMS.map((item, index) => (
+        <TimelineRow
+          key={item.id}
+          item={item}
+          opened={item.id === openId}
+          onToggle={() => handleToggle(item.id)}
+          isFirst={index === 0}
+          isLast={index === TIMELINE_ITEMS.length - 1}
+        />
       ))}
-    </div>
+    </section>
   );
 };
 

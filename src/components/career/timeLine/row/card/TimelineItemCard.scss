@@ -1,0 +1,66 @@
+.timeline-row {
+  display: grid;
+  grid-template-columns: auto 60px minmax(0, 1fr); // rok | osa | karta
+  column-gap: 3.2rem;
+  align-items: center;
+
+  /* levý sloupec – rok */
+  .timeline-year-cell {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 0.4rem;
+
+    .timeline-year {
+      font-family: "Jersey 25", sans-serif;
+      font-size: font-size("4xl");
+      color: var(--color-text-4);
+    }
+  }
+
+  /* prostřední sloupec – osa + kulička */
+  .timeline-axis-cell {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px; // výška jednoho “segmentu” osy
+
+    /* samotná vertikální čára – spojí všechny segmenty v jednu linku */
+    .timeline-axis-line {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background-color: var(--color-text-4);
+    }
+
+    /* kulička na ose */
+    .timeline-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: var(--color-text-4);
+    }
+  }
+
+  /* pravý sloupec – karta */
+  .timeline-card-cell {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  /* --- mobile / užší rozlišení --- */
+  @include max(md) {
+    grid-template-columns: 40px minmax(0, 1fr);
+    column-gap: 1.6rem;
+
+    .timeline-year-cell {
+      display: none;
+    }
+
+    .timeline-axis-cell {
+      min-height: 80px;
+    }
+  }
+}

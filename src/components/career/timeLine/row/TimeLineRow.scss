@@ -1,0 +1,132 @@
+.timeline-card {
+  background-color: var(--color-text-5);
+  border-radius: 12px;
+  padding: 1.8rem 2.4rem;
+  border: 2px dashed var(--color-text-2);
+  max-width: 720px;
+  width: 100%;
+  box-shadow: $shadow-default;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+
+  &.open-card {
+    transform: translateY(-2px);
+
+    // když je karta otevřená, šipka se otočí nahoru
+    .timeline-card-toggle-icon {
+      transform: rotate(-135deg);
+    }
+  }
+
+  /* prázdná karta s otazníkem */
+  &.timeline-card-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80px;
+    border: none;
+    box-shadow: none;
+    color: var(--color-text-4);
+    font-family: "Jersey 25", sans-serif;
+    font-size: 70px;
+  }
+
+  /* header: název pozice + firma + šipka */
+  .timeline-card-header {
+    font-family: "Jersey 25", sans-serif;
+    font-size: font-size("4xl");
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+
+    h3 {
+      font-family: "Jersey 25", sans-serif;
+      font-size: font-size("2xl");
+      text-transform: uppercase;
+      color: var(--color-text-1);
+    }
+  }
+
+  .timeline-card-company-toggle {
+    display: flex;
+    color: var(--color-text-1);
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.2rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* toggle button (šipka) */
+  .timeline-card-toggle {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .timeline-card-toggle-icon {
+    width: 15px;
+    height: 15px;
+    border-right: 3px solid var(--color-text-1);
+    border-bottom: 3px solid var(--color-text-1);
+    transform: rotate(45deg); // šipka dolů
+    transition: transform 0.2s ease;
+  }
+
+  /* footer = tělo + období */
+  footer {
+    margin-top: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2.4rem;
+  }
+
+  /* levá část – popis a technologie */
+  .timeline-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .timeline-card-description,
+  .timeline-card-technologies {
+    column-gap: 0.8rem;
+    row-gap: 0.2rem;
+
+    span:first-child {
+      font-weight: 600;
+      color: var(--color-text-3);
+    }
+
+    span:last-child {
+      color: var(--color-text-3);
+    }
+  }
+
+  /* pravá část – období */
+  .timeline-card-period {
+    align-self: flex-end;
+    font-family: "Jersey 25", sans-serif;
+    font-size: font-size("2xl");
+    white-space: nowrap;
+  }
+
+  /* breakpoint */
+  @include max (md) {
+    padding: 1.6rem 1.8rem;
+
+    footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .timeline-card-period {
+      margin-top: 0.8rem;
+    }
+  }
+}

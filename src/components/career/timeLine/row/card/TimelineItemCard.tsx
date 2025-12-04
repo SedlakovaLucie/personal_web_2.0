@@ -1,5 +1,5 @@
-import "./TimelineItemCard.scss";
 import { useTranslation } from "react-i18next";
+import "./TimelineItemCard.scss";
 
 type TimelineItemCardProps = {
   id: string;
@@ -17,7 +17,6 @@ const TimelineItemCard = ({
   const { t } = useTranslation();
   const path = `career_page.timeline.${id}`;
 
-  // Pokud není job - otazník
   if (!job) {
     return (
       <article className="timeline-card timeline-card-empty">
@@ -28,7 +27,6 @@ const TimelineItemCard = ({
 
   return (
     <article className={`timeline-card ${opened ? "open-card" : ""}`}>
-      {/* halvička: název pozice, firma + šipka */}
       <header className="timeline-card-header">
         <h3>{t(`${path}.title`)}</h3>
 
@@ -41,10 +39,8 @@ const TimelineItemCard = ({
         </div>
       </header>
 
-      {/* otevřená karta */}
       {opened && (
         <footer>
-          {/* levá část: náplň práce + technologie */}
           <div className="timeline-card-body">
             <div className="timeline-card-description">
               <span>Náplň práce:</span>
@@ -56,7 +52,6 @@ const TimelineItemCard = ({
             </div>
           </div>
 
-          {/* pravá část: období (04 – 09 2025) */}
           <div className="timeline-card-period">
             <span>{t(`${path}.period`)}</span>
           </div>

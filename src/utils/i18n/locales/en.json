@@ -27,14 +27,14 @@
   "career_page": {
     "timeline": {
       "job1": {
-        "title": "EN junior front-end developer",
+        "title": "junior front-end developer",
         "company": "royal fox",
         "period": "11 2023 – 02 2024",
         "description": "development of a web application, development and maintenance of websites for internal and client purposes, manual testing + bug reporting, planning and executing sprints",
         "technologies": "Javascript, Bootstrap, GitHub, Webflow"
       },
       "job2": {
-        "title": "EN react typescript developer",
+        "title": "react typescript developer",
         "company": "urc systems",
         "period": "04 – 09 2025",
         "description": "development of military security systems",

@@ -2,9 +2,9 @@ import TimeLine from "../../components/career/timeLine/TimeLine"
 
 const CarrerPage = () => {
   return (
-    <div>
+    <section>
       <TimeLine />
-    </div>
+    </section>
   )
 }
 
