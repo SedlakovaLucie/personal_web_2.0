@@ -6,10 +6,6 @@
   padding: space(2);
   gap: space(1);
 
-  .footer-text {
-    font-size: font-size(md);
-  }
-
   .footer-icons {
     display: flex;
     justify-content: center;
@@ -17,7 +13,7 @@
     gap: space(3);
 
     .footer-icon {
-      width: 20px;
+      width: 25px;
       color: var(--color-footer); 
     }
      a:hover .footer-icon {

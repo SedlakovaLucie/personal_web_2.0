@@ -23,5 +23,23 @@
     "linkedin": "LinkedIn",
     "email": "E-mail",
     "github": "GitHub"
+  },
+  "career_page": {
+    "timeline": {
+      "job1": {
+        "title": "junior front-end developer",
+        "company": "royal fox",
+        "period": "11 2023 – 02 2024",
+        "description": "vývoj webové aplikace, vývoj a správa webů pro interní i klientské účely, manuální testování + report bugů, plánování a realizace sprintů",
+        "technologies": "Javascript, Bootstrap, GitHub, Webflow"
+      },
+      "job2": {
+        "title": "react typescript developer",
+        "company": "urc systems",
+        "period": "04 – 09 2025",
+        "description": "vývoj vojenských bezpečnostních systémů",
+        "technologies": "React, Redux, Typescript, Material UI"
+      }
+    }
   }
 }

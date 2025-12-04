@@ -1,7 +1,10 @@
+import TimeLine from "../../components/career/timeLine/TimeLine"
 
 const CarrerPage = () => {
   return (
-    <div>CarrerPage</div>
+    <div>
+      <TimeLine />
+    </div>
   )
 }
 
