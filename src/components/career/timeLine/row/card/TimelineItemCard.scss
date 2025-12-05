@@ -6,15 +6,15 @@
   width: 100%;
   box-shadow: $shadow-default;
 
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.15);;
+  }
+
   &.open-card {
     transform: translateY(-2px);
 
-    .timeline-card-toggle-icon {
-      transform: rotate(225deg);
-    }
-
     .timeline-card-footer {
-      max-height: 600px;
+      max-height: 300px;
     }
   }
 
@@ -36,7 +36,7 @@
     cursor: pointer;
   }
 
-  //wrapper pro fitmu a šipku
+  //wrapper pro název firmy a šipku
   .timeline-card-company-toggle {
     width: 100%;
     display: flex;
@@ -45,6 +45,7 @@
     gap: space(5);
   }
 
+  /*  wrapper pro šipku */
   .timeline-card-toggle {
     border: none;
     background: none;
@@ -54,13 +55,19 @@
     justify-content: center;
   }
 
+  /* šipka – výchozí stav */
   .timeline-card-toggle-icon {
     width: 16px;
     height: 16px;
     border-right: 4px solid var(--color-text-1);
     border-bottom: 4px solid var(--color-text-1);
-    transform: rotate(45deg);
-    transition: transform 0.35s ease-in-out;
+    transform: rotateX(0deg) rotate(45deg);
+    transition: transform 0.35s ease-out;
+  }
+
+  /* šipka – stav při otevření */
+  .timeline-card-toggle.is-open .timeline-card-toggle-icon {
+    transform: rotateX(180deg) rotate(45deg);
   }
 
   /* -------------------------------- karta body */
@@ -70,7 +77,7 @@
     color: var(--color-text-3);
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.35s ease-in-out;
+    transition: all 0.35s ease-out;
   }
 
   .timeline-card-body {
@@ -93,9 +100,9 @@
     align-self: flex-start;
   }
 
-  /* breakpoint */
+  /* breakpointy */
   @include max(md) {
-    padding: 1.6rem 1.8rem;
+    padding: space(5) space(6);
 
     .timeline-card-header {
       flex-direction: column;
@@ -122,7 +129,6 @@
   color: var(--color-text-4);
   animation: fadePulse 1.5s ease-in-out infinite;
 }
-
 
 /* -------------------------------- animace */
 /* animace pro otazník */

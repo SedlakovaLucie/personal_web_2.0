@@ -79,5 +79,10 @@
     .timeline-axis-cell {
       min-height: 80px;
     }
+    .timeline-axis-line {
+      //na moblilu se osa kreslí v TimeLine.scss
+      display: none;
+    }
   }
 }
+

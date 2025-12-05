@@ -1,7 +1,7 @@
 import "./ContactPage.scss";
 import { useTranslation } from "react-i18next";
-import LinkedInIcon from "../../assets/images/common/LinkedInIcon";
-import GitHubIcon from "../../assets/images/common/GitHubIcon";
+import LinkedinIcon from "../../assets/images/common/LinkedinIcon";
+import GithubIcon from "../../assets/images/common/GithubIcon";
 import EmailIcon from "../../assets/images/common/EmailIcon";
 
 const ContactPage = () => {
@@ -9,12 +9,12 @@ const ContactPage = () => {
 
   const infoLinks = [
     {
-      icon: <LinkedInIcon />,
+      icon: <LinkedinIcon />,
       label: t("contact_page.linkedin"),
       href: "https://www.linkedin.com/in/sedlakova-lucie/",
     },
     {
-      icon: <GitHubIcon />,
+      icon: <GithubIcon />,
       label: t("contact_page.github"),
       href: "https://github.com/SedlakovaLucie",
     },

@@ -1,6 +1,6 @@
 import "./Footer.scss";
 import { useTranslation } from "react-i18next";
-import GithubIcon from "../../../assets/images/common/GitHubIcon";
+import GithubIcon from "../../../assets/images/common/GithubIcon";
 import LinkedinIcon from "../../../assets/images/common/LinkedinIcon";
 import EmailIcon from "../../../assets/images/common/EmailIcon";
 
