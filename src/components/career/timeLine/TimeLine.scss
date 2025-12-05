@@ -1,6 +1,20 @@
 .timeline {
   display: flex;
   flex-direction: column;
-  row-gap: 3.2rem;
-  padding: 4rem 0;
+  row-gap: space(10);
+  padding-top: $padding-top-xl;
+  padding-left: 80px;
+  padding-right: 80px;
+
+  /* breakpoints */
+  @include max(lg) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  @include max(md) {
+    padding-top: $padding-top-md;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

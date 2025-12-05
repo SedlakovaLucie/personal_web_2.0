@@ -11,6 +11,7 @@
   // variables LIGHT mode
   --color-bg: #{$color-bg-light};
   --color-footer: #{$color-footer-light};
+  --color-bg-card: #{$color-bg-card-light};
   --color-text-1: #{$color-text-muted}; //z hnědé na žlutou
   --color-text-2: #{$color-text}; //z bílé na žlutou
   --color-text-3: #{$color-text-muted}; //z hnědé na bílou
@@ -26,6 +27,7 @@
 [data-theme="dark"] {
   --color-bg: #{$color-bg-dark};
   --color-footer: #{$color-footer-dark};
+  --color-bg-card: #{$color-bg-card-dark};
   --color-text-1: #{$color-text-secondary}; //z hnědé na žlutou
   --color-text-2: #{$color-text-secondary}; //z bílé na žlutou
   --color-text-3: #{$color-text}; //z hnědé na bílou

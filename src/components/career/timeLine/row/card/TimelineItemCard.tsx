@@ -19,7 +19,7 @@ const TimelineItemCard = ({
 
   if (!job) {
     return (
-      <article className="timeline-card timeline-card-empty">
+      <article className="timeline-card-empty">
         <div>?</div>
       </article>
     );
@@ -27,36 +27,36 @@ const TimelineItemCard = ({
 
   return (
     <article className={`timeline-card ${opened ? "open-card" : ""}`}>
-      <header className="timeline-card-header">
-        <h3>{t(`${path}.title`)}</h3>
+      <header className="timeline-card-header" onClick={handleToggle}>
+        <p className="timeline-card-title">{t(`${path}.title`)}</p>
 
         <div className="timeline-card-company-toggle">
-          <span>{t(`${path}.company`)}</span>
+          <p className="timeline-card-company">{t(`${path}.company`)}</p>
 
-          <button className="timeline-card-toggle" onClick={handleToggle}>
+          <button className="timeline-card-toggle">
             <span className="timeline-card-toggle-icon" />
           </button>
         </div>
       </header>
 
-      {opened && (
-        <footer>
+      
+        <footer className={`timeline-card-footer ${opened ? "footer-open" : ""}`}>
           <div className="timeline-card-body">
-            <div className="timeline-card-description">
-              <span>Náplň práce:</span>
-              <span>{t(`${path}.description`)}</span>
+            <div className="timeline-card-row">
+              <p className="timeline-card-period">{t(`${path}.period`)}</p>
             </div>
-            <div className="timeline-card-technologies">
-              <span>Technologie:</span>
-              <span>{t(`${path}.technologies`)}</span>
-            </div>
-          </div>
 
-          <div className="timeline-card-period">
-            <span>{t(`${path}.period`)}</span>
+            <div className="timeline-card-row">
+              <p className="timeline-card-label">{t("career_page.timeline.description_label")}:</p>
+              <p className="timeline-card-text">{t(`${path}.description`)}</p>
+            </div>
+
+            <div className="timeline-card-row">
+              <p className="timeline-card-label">{t("career_page.timeline.technologies_label")}:</p>
+              <p className="timeline-card-text">{t(`${path}.technologies`)}</p>
+            </div>
           </div>
         </footer>
-      )}
     </article>
   );
 };

@@ -6,8 +6,6 @@ type TimelineRowProps = {
   item: TimelineItem;
   opened: boolean;
   onToggle: () => void;
-  isFirst: boolean;
-  isLast: boolean;
 };
 
 const TimelineRow = ({ item, opened, onToggle }: TimelineRowProps) => {

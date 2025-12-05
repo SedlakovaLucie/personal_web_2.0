@@ -40,7 +40,8 @@
   //-------loading text s kurzorem-------//
   .loading-container {
     color: var(--color-text-1);
-    letter-spacing: 35%;
+    letter-spacing: 0.25em;
+
     margin-top: space(8);
     //objevení a zpoždění loadingu
     opacity: 0;

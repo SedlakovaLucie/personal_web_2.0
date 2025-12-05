@@ -26,6 +26,8 @@
   },
   "career_page": {
     "timeline": {
+      "description_label": "Náplň práce",
+      "technologies_label": "Technologie",
       "job1": {
         "title": "junior front-end developer",
         "company": "royal fox",
@@ -36,7 +38,7 @@
       "job2": {
         "title": "react typescript developer",
         "company": "urc systems",
-        "period": "04 – 09 2025",
+        "period": "04 2025 – 09 2025",
         "description": "vývoj vojenských bezpečnostních systémů",
         "technologies": "React, Redux, Typescript, Material UI"
       }

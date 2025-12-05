@@ -1,66 +1,139 @@
-.timeline-row {
-  display: grid;
-  grid-template-columns: auto 60px minmax(0, 1fr); // rok | osa | karta
-  column-gap: 3.2rem;
-  align-items: center;
+.timeline-card {
+  background-color: var(--color-bg-card);
+  border-radius: 10px;
+  padding: space(6) space(8);
+  border: 2px dashed var(--color-text-2);
+  width: 100%;
+  box-shadow: $shadow-default;
 
-  /* levý sloupec – rok */
-  .timeline-year-cell {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-top: 0.4rem;
+  &.open-card {
+    transform: translateY(-2px);
 
-    .timeline-year {
-      font-family: "Jersey 25", sans-serif;
-      font-size: font-size("4xl");
-      color: var(--color-text-4);
+    .timeline-card-toggle-icon {
+      transform: rotate(225deg);
+    }
+
+    .timeline-card-footer {
+      max-height: 600px;
     }
   }
 
-  /* prostřední sloupec – osa + kulička */
-  .timeline-axis-cell {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 120px; // výška jednoho “segmentu” osy
-
-    /* samotná vertikální čára – spojí všechny segmenty v jednu linku */
-    .timeline-axis-line {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 4px;
-      background-color: var(--color-text-4);
-    }
-
-    /* kulička na ose */
-    .timeline-dot {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background-color: var(--color-text-4);
-    }
+  /* -------------------------------- společné styly */
+  .timeline-card-header,
+  .timeline-card-period {
+    font-family: "Jersey 25", sans-serif;
+    font-size: font-size("3xl");
+    color: var(--color-text-1);
+    text-transform: uppercase;
   }
 
-  /* pravý sloupec – karta */
-  .timeline-card-cell {
+  /* -------------------------------- karta header: název pozice + firma + šipka */
+  .timeline-card-header {
     display: flex;
+    justify-content: space-between;
     align-items: flex-start;
+    margin-bottom: space(4);
+    cursor: pointer;
   }
 
-  /* --- mobile / užší rozlišení --- */
+  //wrapper pro fitmu a šipku
+  .timeline-card-company-toggle {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: space(5);
+  }
+
+  .timeline-card-toggle {
+    border: none;
+    background: none;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .timeline-card-toggle-icon {
+    width: 16px;
+    height: 16px;
+    border-right: 4px solid var(--color-text-1);
+    border-bottom: 4px solid var(--color-text-1);
+    transform: rotate(45deg);
+    transition: transform 0.35s ease-in-out;
+  }
+
+  /* -------------------------------- karta body */
+  .timeline-card-footer {
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-text-3);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease-in-out;
+  }
+
+  .timeline-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .timeline-card-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .timeline-card-label {
+    font-weight: font-weight(bold);
+  }
+
+  .timeline-card-period {
+    align-self: flex-start;
+  }
+
+  /* breakpoint */
   @include max(md) {
-    grid-template-columns: 40px minmax(0, 1fr);
-    column-gap: 1.6rem;
+    padding: 1.6rem 1.8rem;
 
-    .timeline-year-cell {
-      display: none;
+    .timeline-card-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.2rem;
     }
 
-    .timeline-axis-cell {
-      min-height: 80px;
+    .timeline-card-company-toggle {
+      flex-direction: row;
+      justify-content: space-between;
     }
+
+    .timeline-card-footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
+/* styly pro otazník */
+.timeline-card-empty {
+  font-family: "Jersey 25", sans-serif;
+  font-size: 100px;
+  color: var(--color-text-4);
+  animation: fadePulse 1.5s ease-in-out infinite;
+}
+
+
+/* -------------------------------- animace */
+/* animace pro otazník */
+@keyframes fadePulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
   }
 }

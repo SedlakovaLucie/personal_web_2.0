@@ -26,6 +26,8 @@
   },
   "career_page": {
     "timeline": {
+      "description_label": "Job description",
+      "technologies_label": "Technology",
       "job1": {
         "title": "junior front-end developer",
         "company": "royal fox",

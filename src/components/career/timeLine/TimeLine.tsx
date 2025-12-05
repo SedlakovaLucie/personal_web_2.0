@@ -23,14 +23,12 @@ const TimeLine = () => {
 
   return (
     <section className="timeline">
-      {TIMELINE_ITEMS.map((item, index) => (
+      {TIMELINE_ITEMS.map((item) => (
         <TimelineRow
           key={item.id}
           item={item}
           opened={item.id === openId}
           onToggle={() => handleToggle(item.id)}
-          isFirst={index === 0}
-          isLast={index === TIMELINE_ITEMS.length - 1}
         />
       ))}
     </section>
