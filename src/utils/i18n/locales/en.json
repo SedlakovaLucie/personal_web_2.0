@@ -43,5 +43,19 @@
         "technologies": "React, Redux, Typescript, Material UI"
       }
     }
+  },
+  "portfolio_page": {
+    "project1": {
+      "project_name": "Investiční kalkulačka",
+      "project_description": "EN zatím v procesu"
+    },
+    "project2": {
+      "project_name": "Sestav HB",
+      "project_description": "A presentation website for the construction company SESTAV HB s.r.o., built in React with a project gallery using library PhotoSwipe. The site also includes domain management, hosting, and basic SEO optimization."
+    },
+    "project3": {
+      "project_name": "Cashflow tracker",
+      "project_description": "This is an app that allows you to record income and expenses, filter, edit, delete them and more. Data is stored and managed using Firebase database."
+    }
   }
 }

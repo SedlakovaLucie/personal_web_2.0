@@ -30,4 +30,8 @@ body {
   max-width: 1240px;
   margin: 0 auto;
   transition: $default-transition;
+
+  @include max(md) {
+    font-size: font-size(md);
+  }
 }

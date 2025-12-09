@@ -18,7 +18,6 @@ const TimelineRow = ({ item, opened, onToggle }: TimelineRowProps) => {
 
       {/* 2) prostřední sloupec – osa + kulička */}
       <div className="timeline-axis-cell">
-        {/* tady bude ve SCSS vertikální čára + případné ořezání nahoře/dole */}
         <div className="timeline-axis-line" />
         <div className="timeline-dot" />
       </div>
