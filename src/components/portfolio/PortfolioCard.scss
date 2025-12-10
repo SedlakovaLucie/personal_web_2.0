@@ -1,3 +1,105 @@
-.card-image {
-  width: 100px;
+.portfolio-card {
+  background-color: var(--color-text);
+  border-radius: 20px;
+  padding: space(4);
+  box-shadow: $shadow-default;
+  max-width: 360px;
+  margin: 0 auto;
+  position: relative;
+
+  /* obrázek = link */
+  .demo-link {
+    display: block;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+
+  /* ----------------------------horní část karty */
+  .card-image-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: space(5) space(4);
+    text-align: center;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    min-height: 200px;
+
+    // obrázek v pozadí
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    // overlay
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0.4)
+      );
+    }
+
+    .card-title,
+    .tech-icons {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* nadpis */
+    .card-title {
+      font-family: "Jersey 25", sans-serif;
+      font-size: font-size("4xl");
+      color: var(--color-text);
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    /* ikony pod nadpisem */
+    .tech-icons {
+      display: flex;
+      justify-content: center;
+      gap: space(2);
+
+      .tech-icon {
+        width: 35px;
+        height: 35px;
+        filter: brightness(0) invert(1);
+      }
+    }
+  }
+
+  /* ----------------------------spodní část karty */
+  .card-description-wrapper {
+    color: var(--color-text-muted);
+    margin-top: space(4);
+    margin-bottom: space(2);
+    text-align: center;
+    font-size: font-size(md);
+    line-height: 1.5;
+
+    /* github ikona */
+    .github-link {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      display: inline-flex;
+      width: 25px;
+      height: auto;
+      color: var(--color-text-muted);
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: var(--color-text-secondary);
+      }
+    }
+  }
 }

@@ -1,0 +1,9 @@
+.portfolio-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: space(7);
+
+    @include max(md) {
+        flex-direction: column;
+    }
+}

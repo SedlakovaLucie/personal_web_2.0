@@ -1,5 +1,5 @@
-import "./PortfolioCard.scss"
-import GithubIcon from "../../assets/images/common/GithubIcon"
+import "./PortfolioCard.scss";
+import GithubIcon from "../../assets/images/common/GithubIcon";
 import type { TechnologyId } from "../../components/portfolio/technologiesIcons";
 import { TECHNOLOGY_ICONS } from "../../components/portfolio/technologiesIcons";
 import { useTranslation } from "react-i18next";
@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 type Project = {
   id: string;
   image: string;
+  demoLink: string;
   technologies: TechnologyId[];
   githubUrl?: string;
 };
@@ -23,29 +24,42 @@ const ProjectCard = ({ project }: ProjectProps) => {
 
   return (
     <article className="portfolio-card">
-      <div className="card-image-wrapper">
-        {/* horní část karty */}
-        <img src={project.image} alt="" className="card-image" />
-        <h2>{title}</h2>
-        <div className="tech-icons">
-          {project.technologies.map((techId) => {
-            const icon = TECHNOLOGY_ICONS[techId];
+      {/* horní část karty */}
+      <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="demo-link">
+        <div
+          className="card-image-wrapper"
+          style={{ backgroundImage: `url(${project.image})` }}
+        >
+          <h2 className="card-title">{title}</h2>
+          <div className="tech-icons">
+            {project.technologies.map((techId) => {
+              const icon = TECHNOLOGY_ICONS[techId];
 
-            return (
-              <img
-                key={techId}
-                src={icon.src}
-                alt={icon.alt}
-                className="tech-icon"
-              />
-            );
-          })}
+              return (
+                <img
+                  key={techId}
+                  src={icon.src}
+                  alt={icon.alt}
+                  className="tech-icon"
+                />
+              );
+            })}
+          </div>
         </div>
-      </div>
+      </a>
       {/* spodní část karty */}
       <div className="card-description-wrapper">
         <p>{description}</p>
-        {project.githubUrl && <a href={project.githubUrl} target="_blank"><GithubIcon/></a>}
+        {project.githubUrl && (
+          <a
+            href={project.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="github-link"
+          >
+            <GithubIcon />
+          </a>
+        )}
       </div>
     </article>
   );
