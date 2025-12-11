@@ -19,7 +19,7 @@
     "loading": "loading..."
   },
   "contact_page": {
-    "hero_text": "EN Pokud jsem vás zaujala můžete mě kontaktovat prostřednictvím těchto odkazů",
+    "hero_text": "If you’re interested in my work, you can contact me using the links below:",
     "linkedin": "LinkedIn",
     "email": "E-mail",
     "github": "GitHub"
@@ -32,30 +32,30 @@
         "title": "junior front-end developer",
         "company": "royal fox",
         "period": "11 2023 – 02 2024",
-        "description": "development of a web application, development and maintenance of websites for internal and client purposes, manual testing + bug reporting, planning and executing sprints",
+        "description": "I contributed to the development of a web application with a focus on UI implementation and styling using Bootstrap. I created and managed both internal and client websites in Webflow. I performed manual testing, including bug identification and reporting. Later, I also took on part of the project management responsibilities, such as sprint planning, task assignment, and overseeing task completion.",
         "technologies": "Javascript, Bootstrap, GitHub, Webflow"
       },
       "job2": {
         "title": "react typescript developer",
         "company": "urc systems",
         "period": "04 2025 – 09 2025",
-        "description": "development of military security systems",
+        "description": "I contributed to the development of the front-end interface for security systems in the military sector. I developed new features using React and TypeScript and created UI components with Material UI.",
         "technologies": "React, Redux, Typescript, Material UI"
       }
     }
   },
   "portfolio_page": {
     "project1": {
-      "project_name": "Investment calculator",
-      "project_description": "EN zatím v procesu"
+      "project_name": "Sestav HB",
+      "project_description": "A presentation website for the construction company SESTAV HB s.r.o., built in React with a project gallery using library PhotoSwipe. The site also includes domain management, hosting, and SEO optimization."
     },
     "project2": {
-      "project_name": "Sestav HB",
-      "project_description": "A presentation website for the construction company SESTAV HB s.r.o., built in React with a project gallery using library PhotoSwipe. The site also includes domain management, hosting, and basic SEO optimization."
-    },
-    "project3": {
       "project_name": "Cashflow tracker",
       "project_description": "This is an app that allows you to record income and expenses, filter, edit, delete them and more. Data is stored and managed using Firebase database."
+    },
+    "project3": {
+      "project_name": "Weather app",
+      "project_description": "An application for displaying current weather, built in React and styled in CSS. The homepage shows weather for five main cities with the option to switch meteorological parameters. On the second page you can enter any location in the world and get current data via API."
     }
   }
 }

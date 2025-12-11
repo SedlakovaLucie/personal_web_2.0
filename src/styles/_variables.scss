@@ -20,7 +20,7 @@ $font-size-scale: (
   //36px
   "5xl": 3rem,
   //48px
-  "6xl": 3.75rem //60px
+  "6xl": 3.75rem //60px,,
 );
 
 //---Font-weight--- (Inter)
@@ -94,6 +94,7 @@ $color-text-dark: #333333; //tmavě hnědá
 $color-bg-light: #ffc300;
 $color-footer-light: #fff;
 $color-bg-card-light: #f4d670;
+$shadow-color-light: 0, 0, 0;
 //toggle
 $icon-fill-light: #333333;
 $icon-fill-hover-light: #605f5f;
@@ -103,6 +104,7 @@ $icon-fill-hover-light: #605f5f;
 $color-bg-dark: #333333;
 $color-footer-dark: #605f5f;
 $color-bg-card-dark: #605f5f;
+$shadow-color-dark: 255, 255, 255;
 //toggle
 $icon-fill-dark: #fff;
 $icon-fill-hover-dark: #605f5f;

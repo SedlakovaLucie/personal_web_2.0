@@ -4,6 +4,30 @@
   column-gap: space(9);
   align-items: center;
 
+  // animace pro rok a kartu
+  .timeline-year-cell,
+  .timeline-card-cell {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: year-card-animation 0.7s ease forwards;
+  }
+
+  /* delay pro jednotlivé řádky */
+  &:nth-child(3) .timeline-year-cell,
+  &:nth-child(3) .timeline-card-cell {
+    animation-delay: 0.1s;
+  }
+
+  &:nth-child(2) .timeline-year-cell,
+  &:nth-child(2) .timeline-card-cell {
+    animation-delay: 0.4s;
+  }
+
+  &:nth-child(1) .timeline-year-cell,
+  &:nth-child(1) .timeline-card-cell {
+    animation-delay: 0.7s;
+  }
+
   /* --------------------------------levý sloupec – rok */
   .timeline-year-cell {
     display: flex;
@@ -56,7 +80,7 @@
     height: 20px;
     /* dvě čáry tvořící šipku */
     border-top: 4px solid var(--color-text-4);
-    border-left: 4px solid var(--color-text-4);    
+    border-left: 4px solid var(--color-text-4);
   }
   /* --------------------------------pravý sloupec – karta */
   .timeline-card-cell {
@@ -86,3 +110,13 @@
   }
 }
 
+@keyframes year-card-animation {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

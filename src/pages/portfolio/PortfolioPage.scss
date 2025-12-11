@@ -2,8 +2,10 @@
     display: flex;
     flex-direction: row;
     gap: space(7);
+    padding-top: $padding-top-xl;
 
     @include max(md) {
         flex-direction: column;
+        padding-top: $padding-top-md;
     }
 }

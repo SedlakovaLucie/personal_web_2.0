@@ -1,9 +1,10 @@
-import "./PortfolioPage.scss"
+import "./PortfolioPage.scss";
 import PorfolioCard from "../../components/portfolio/PortfolioCard";
 import type { TechnologyId } from "../../components/portfolio/technologiesIcons";
-import calculatorImage from "@/assets/images/portfolio/calculator.jpg"
+//import calculatorImage from "@/assets/images/portfolio/calculator.jpg"
+import weatherImage from "@/assets/images/portfolio/weather_app.jpg";
 import cashflowImage from "@/assets/images/portfolio/cashflow_tracker.jpg";
-import sestavhbImage from "@/assets/images/portfolio/sestav_hb.jpg"
+import sestavhbImage from "@/assets/images/portfolio/sestav_hb.jpg";
 
 export type Project = {
   id: string; //project1, project2...
@@ -16,22 +17,23 @@ export type Project = {
 const PORTFOLIO_ITEMS: Project[] = [
   {
     id: "project1",
-    image: calculatorImage,
-    demoLink: "",
-    technologies: ["react", "ts", "scss"],
-  },
-  {
-    id: "project2",
     image: sestavhbImage,
     demoLink: "https://sestavhb.cz",
     technologies: ["react", "css"],
   },
   {
-    id: "project3",
+    id: "project2",
     image: cashflowImage,
     demoLink: "https://expense-log-app.netlify.app",
     technologies: ["react", "ts", "css", "firebase"],
     githubUrl: "https://github.com/SedlakovaLucie/cashflow-tracker",
+  },
+  {
+    id: "project3",
+    image: weatherImage,
+    demoLink: "https://sunandstorm.netlify.app",
+    technologies: ["react", "css"],
+    githubUrl: "https://github.com/SedlakovaLucie/weather_app"
   },
 ];
 

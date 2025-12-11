@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-const DOT_ROUTES = [
+const DOT_LINKS = [
   { path: "/", key: "home" },
   { path: "/skills", key: "skills" },
   { path: "/portfolio", key: "portfolio" },
@@ -14,13 +14,13 @@ const DOT_ROUTES = [
 const MainPage = () => {
   const { t } = useTranslation();
 
+  const [index, setIndex] = useState(0);
+
   const line1 = t("home_page.hero_text_1");
   const line2 = t("home_page.hero_text_2");
   const fullText = `${line1}\n${line2}`;
 
-  const [index, setIndex] = useState(0);
   const speed = 80; // ms na znak
-
   const typed = fullText.slice(0, index);
   const isFinished = index >= fullText.length;
 
@@ -32,7 +32,7 @@ const MainPage = () => {
     }, speed);
 
     return () => window.clearTimeout(timeoutId);
-  }, [index, fullText, speed]);
+  }, [index, fullText]);
 
   return (
     <section className="hero-wrapper">
@@ -45,13 +45,13 @@ const MainPage = () => {
       </div>
 
       {isFinished && (
-        <div className="hero-dots hero-dots--visible">
-          {DOT_ROUTES.map(({ path, key }) => (
+        <div className="hero-dots hero-dots-visible">
+          {DOT_LINKS.map(({ path, key }) => (
             <NavLink
               key={path}
               to={path}
               className={({ isActive }) =>
-                "hero-dot" + (isActive ? " hero-dot--active" : "")
+                "hero-dot" + (isActive ? " hero-dot-active" : "")
               }
               aria-label={`${t("home_page.dots")} ${t(`navbar.${key}`)}`}
             />

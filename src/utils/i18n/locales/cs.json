@@ -19,7 +19,7 @@
     "loading": "načítání..."
   },
   "contact_page": {
-    "hero_text": "Pokud jsem vás zaujala můžete mě kontaktovat prostřednictvím těchto odkazů",
+    "hero_text": "Pokud vás moje práce zaujala, můžete mě kontaktovat prostřednictvím odkazů níže:",
     "linkedin": "LinkedIn",
     "email": "E-mail",
     "github": "GitHub"
@@ -32,30 +32,30 @@
         "title": "junior front-end developer",
         "company": "royal fox",
         "period": "11 2023 – 02 2024",
-        "description": "vývoj webové aplikace, vývoj a správa webů pro interní i klientské účely, manuální testování + report bugů, plánování a realizace sprintů",
+        "description": "Podílela jsem se na vývoji webové aplikace se zaměřením na UI a stylování v Bootstrapu. Tvořila a spravovala jsem firemní i klientské weby ve Webflow. Zajišťovala jsem manuální testování, identifikaci chyb a jejich reportování. Později jsem převzala i část projektového řízení – plánování sprintů, rozdělování úkolů a dohled nad jejich plněním.",
         "technologies": "Javascript, Bootstrap, GitHub, Webflow"
       },
       "job2": {
         "title": "react typescript developer",
         "company": "urc systems",
         "period": "04 2025 – 09 2025",
-        "description": "vývoj vojenských bezpečnostních systémů",
-        "technologies": "React, Redux, Typescript, Material UI"
+        "description": "Podílela jsem se na vývoji front-endového rozhraní bezpečnostních systémů ve vojenském sektoru. Vyvíjela jsem nové funkcionality v Reactu a TypeScriptu a vytvářela UI komponenty v Material UI.",
+        "technologies": "React, Typescript, Material UI"
       }
     }
   },
   "portfolio_page": {
     "project1": {
-      "project_name": "Investiční kalkulačka",
-      "project_description": "Zatím v procesu"
+      "project_name": "Sestav HB",
+      "project_description": "Prezentační web pro stavební společnost SESTAV HB s.r.o., postavený v Reactu s galerií projektů využívající knihovnu PhotoSwipe. Web zahrnuje také správu domény, hosting a SEO optimalizaci."
     },
     "project2": {
-      "project_name": "Sestav HB",
-      "project_description": "Prezentační web pro stavební společnost SESTAV HB s.r.o., postavený v Reactu s galerií projektů využívající knihovnu PhotoSwipe. Web zahrnuje také správu domény, hosting a základní SEO optimalizaci."
-    },
-    "project3": {
       "project_name": "Cashflow tracker",
       "project_description": "Jedná se o aplikaci, která umožňuje zaznamenávání příjmů a výdajů, jejich filtrování, editaci, odstranění a další funkce. Data jsou uložena a spravována prostřednictvím databáze Firebase."
+    },
+    "project3": {
+      "project_name": "Weather app",
+      "project_description": "Aplikace pro zobrazení aktuálního počasí, postavená v Reactu a stylovaná v CSS. Homepage ukazuje počasí pro pět hlavních měst s možností přepínání meteorologických parametrů. Na druhé stránce lze zadat jakoukoliv lokalitu na světě a získat aktuální data prostřednictvím API."
     }
   }
 }

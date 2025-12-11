@@ -9,7 +9,7 @@
   text-align: center;
   padding-top: $padding-top-xl;
 
-  /* text */
+  /* -------------------text */
   .home-page-h1 {
     font-size: 110px;
     color: var(--color-text);
@@ -20,6 +20,7 @@
     color: var(--color-text-1);
   }
 
+  /* typewriter */
   .typewriter-homepage {
     position: relative;
     white-space: pre-line;
@@ -32,69 +33,55 @@
     animation: caret-blink 0.7s steps(1) infinite;
   }
 
-  /* tečky = odkazy */
+  /* -------------------tečky = odkazy */
   .hero-dots {
     margin-top: space(6);
     display: flex;
     justify-content: center;
     gap: space(5);
-    //nejdřív skryté
-    opacity: 0;
-    transform: translateX(-30px);
     pointer-events: none;
-    transition: opacity 0.5s ease, transform 0.5s ease;
 
-    &--visible {
+    &-visible {
       opacity: 1;
       transform: translateX(0);
       pointer-events: auto;
 
+      /* jedna tečka */
       .hero-dot {
+        width: 20px;
+        height: 20px;
+        display: block;
+        border-radius: 50%;
+        border: 2px solid var(--color-text);
+        transition: border-color 0.3s ease;
+        background: transparent;
+        cursor: pointer;
         opacity: 0;
         transform: translateY(10px);
         animation: hero-dot-pop 0.35s ease forwards;
+
+        &:hover:not(.hero-dot-active) {
+          border-color: var(--color-text-1);
+        }
       }
 
-      .hero-dot:nth-child(1) {
-        animation-delay: 0s;
+      .hero-dot-active {
+        background: var(--color-text);
+        border-color: var(--color-text);
       }
-      .hero-dot:nth-child(2) {
-        animation-delay: 0.06s;
-      }
-      .hero-dot:nth-child(3) {
-        animation-delay: 0.12s;
-      }
-      .hero-dot:nth-child(4) {
-        animation-delay: 0.18s;
-      }
-      .hero-dot:nth-child(5) {
-        animation-delay: 0.24s;
+
+      /* zpoždění teček */
+      .hero-dot {
+        @for $i from 1 through 5 {
+          &:nth-child(#{$i}) {
+            animation-delay: ($i - 1) * 0.06s;
+          }
+        }
       }
     }
   }
 
-  /* jedna tečka */
-  .hero-dot {
-    width: 20px;
-    height: 20px;
-    display: block;
-    border-radius: 50%;
-    border: 2px solid var(--color-text);
-    background: transparent;
-    cursor: pointer;
-    transition: border-color 0.3s ease;
-
-    &:hover:not(.hero-dot--active) {
-      border-color: var(--color-text-1);
-    }
-  }
-
-  .hero-dot--active {
-    background: var(--color-text);
-    border-color: var(--color-text);
-  }
-
-  /* breakpoints */
+  /* -------------------breakpoints */
   @include max(md) {
     padding-top: $padding-top-md;
     line-height: 60px;
@@ -109,7 +96,8 @@
   }
 }
 
-//animace cursoru
+/* -------------------animace */
+/* animace cursoru */
 @keyframes caret-blink {
   0%,
   100% {
@@ -120,7 +108,7 @@
   }
 }
 
-//animace zobrazení teček
+/* animace zobrazení teček */
 @keyframes hero-dot-pop {
   from {
     opacity: 0;
