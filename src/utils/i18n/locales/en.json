@@ -39,7 +39,7 @@
         "title": "react typescript developer",
         "company": "urc systems",
         "period": "04 2025 – 09 2025",
-        "description": "I contributed to the development of the front-end interface for security systems in the military sector. I developed new features using React and TypeScript and created UI components with Material UI.",
+        "description": "I contributed to the development of the front-end interface for security systems in the military sector. I developed new features using React and TypeScript and created components with Material UI.",
         "technologies": "React, Redux, Typescript, Material UI"
       }
     }
@@ -47,15 +47,15 @@
   "portfolio_page": {
     "project1": {
       "project_name": "Sestav HB",
-      "project_description": "A presentation website for the construction company SESTAV HB s.r.o., built in React with a project gallery using library PhotoSwipe. The site also includes domain management, hosting, and SEO optimization."
+      "project_description": "A presentation website for the construction company SESTAV HB s.r.o., featuring a project gallery built with the PhotoSwipe library. The project also included domain management, hosting, and SEO optimization."
     },
     "project2": {
       "project_name": "Cashflow tracker",
-      "project_description": "This is an app that allows you to record income and expenses, filter, edit, delete them and more. Data is stored and managed using Firebase database."
+      "project_description": "The application allows users to record income and expenses, filter, edit, delete, and manage them using various features. All data is stored and handled through a Firebase database."
     },
     "project3": {
       "project_name": "Weather app",
-      "project_description": "An application for displaying current weather, built in React and styled in CSS. The homepage shows weather for five main cities with the option to switch meteorological parameters. On the second page you can enter any location in the world and get current data via API."
+      "project_description": "A weather application that displays current conditions. The homepage shows weather data for five major cities, and a second page allows users to enter any location worldwide and retrieve real-time information via an API."
     }
   }
 }

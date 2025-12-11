@@ -1,11 +1,11 @@
 .portfolio-wrapper {
-    display: flex;
-    flex-direction: row;
-    gap: space(7);
-    padding-top: $padding-top-xl;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: space(7);
+  padding-top: $padding-top-xl;
+    perspective: 1000px;
 
-    @include max(md) {
-        flex-direction: column;
-        padding-top: $padding-top-md;
-    }
+  @include max(md) {
+    padding-top: $padding-top-md;
+  }
 }

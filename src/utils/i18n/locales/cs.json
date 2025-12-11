@@ -39,7 +39,7 @@
         "title": "react typescript developer",
         "company": "urc systems",
         "period": "04 2025 – 09 2025",
-        "description": "Podílela jsem se na vývoji front-endového rozhraní bezpečnostních systémů ve vojenském sektoru. Vyvíjela jsem nové funkcionality v Reactu a TypeScriptu a vytvářela UI komponenty v Material UI.",
+        "description": "Podílela jsem se na vývoji front-endového rozhraní bezpečnostních systémů ve vojenském sektoru. Vyvíjela jsem nové funkcionality v Reactu a TypeScriptu a vytvářela komponenty v Material UI.",
         "technologies": "React, Typescript, Material UI"
       }
     }
@@ -51,11 +51,11 @@
     },
     "project2": {
       "project_name": "Cashflow tracker",
-      "project_description": "Jedná se o aplikaci, která umožňuje zaznamenávání příjmů a výdajů, jejich filtrování, editaci, odstranění a další funkce. Data jsou uložena a spravována prostřednictvím databáze Firebase."
+      "project_description": "Aplikace umožňuje zaznamenávání příjmů a výdajů, jejich filtrování, editaci, odstranění a další funkce. Data jsou uložena a spravována prostřednictvím databáze Firebase."
     },
     "project3": {
       "project_name": "Weather app",
-      "project_description": "Aplikace pro zobrazení aktuálního počasí, postavená v Reactu a stylovaná v CSS. Homepage ukazuje počasí pro pět hlavních měst s možností přepínání meteorologických parametrů. Na druhé stránce lze zadat jakoukoliv lokalitu na světě a získat aktuální data prostřednictvím API."
+      "project_description": "Aplikace pro zobrazení aktuálního počasí. Homepage zobrazuje počasí pro pět hlavních měst a na druhé stránce lze zadat libovolnou lokalitu na světě a získat aktuální data prostřednictvím API."
     }
   }
 }
