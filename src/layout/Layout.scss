@@ -2,9 +2,16 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
 
-  .layout-main {
-    flex: 1;
-    padding: space(6) space(4);
+@supports (height: 100dvh) {
+  .layout {
+    min-height: 100dvh; // skutečná viditelná výška
   }
+}
+
+.layout-main {
+  flex: 1;
+  padding: space(6) space(4);
+  min-height: 0;
 }

@@ -14,10 +14,19 @@
 
     .footer-icon {
       width: 25px;
-      color: var(--color-footer); 
+      color: var(--color-footer);
     }
-     a:hover .footer-icon {
-    color: var(--color-text-1);
+    a:hover .footer-icon {
+      color: var(--color-text-1);
+    }
   }
+
+  @include max(md) {
+    font-size: font-size(sm);
+    .footer-icons {
+      .footer-icon {
+        width: 20px;
+      }
+    }
   }
 }

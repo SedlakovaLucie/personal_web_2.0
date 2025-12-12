@@ -1,0 +1,56 @@
+.error-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: $padding-top-xl;
+
+  .error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: space(4);
+
+    .error-mark,
+    .error-h1 {
+      font-family: "Jersey 25", sans-serif;
+      text-transform: uppercase;
+      font-size: 110px;
+      color: var(--color-text-2);
+    }
+
+    .error-mark {
+      animation: mark-animation 1.5s ease-in-out infinite;
+      font-size: 130px;
+    }
+  }
+  .error-text {
+    font-size: font-size("xl");
+  }
+
+  @include max(md) {
+    padding-top: $padding-top-md;
+    .error {
+      .error-mark,
+      .error-h1 {
+        font-size: 50px;
+      }
+    }
+    .error-text {
+      font-size: font-size("md");
+    }
+  }
+}
+
+//animace vykřičníku
+@keyframes mark-animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}

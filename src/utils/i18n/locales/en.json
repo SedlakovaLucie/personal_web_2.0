@@ -1,6 +1,6 @@
 {
   "footer": {
-    "text": "| Lucie Jagošová EN"
+    "text": "| Lucie Jagošová"
   },
   "navbar": {
     "home": "Home",
@@ -57,5 +57,8 @@
       "project_name": "Weather app",
       "project_description": "A weather application that displays current conditions. The homepage shows weather data for five major cities, and a second page allows users to enter any location worldwide and retrieve real-time information via an API."
     }
+  },
+  "error_page": {
+    "error_text": "This corner of the website is empty."
   }
 }

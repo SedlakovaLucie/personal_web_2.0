@@ -11,8 +11,8 @@
   },
   "home_page": {
     "h1_text": "Ahoj, já jsem Lucie",
-    "hero_text_1": "vývojářka",
-    "hero_text_2": "front-endu",
+    "hero_text_1": "front-end",
+    "hero_text_2": "vývojářka",
     "dots": "odkaz na"
   },
   "skills_page": {
@@ -57,5 +57,8 @@
       "project_name": "Weather app",
       "project_description": "Aplikace pro zobrazení aktuálního počasí. Homepage zobrazuje počasí pro pět hlavních měst a na druhé stránce lze zadat libovolnou lokalitu na světě a získat aktuální data prostřednictvím API."
     }
+  },
+  "error_page": {
+    "error_text": "Tenhle kout webu je prázdný."
   }
 }
