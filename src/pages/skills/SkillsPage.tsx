@@ -91,7 +91,6 @@ const SkillsPage = () => {
           />
         ))}
       </div>
-
       <div className="loading-container">
         <p className="typewriter-skillpage">{displayed}</p>
       </div>

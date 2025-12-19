@@ -8,7 +8,7 @@ const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="footer-container">
+    <footer className="footer-container">
       <div className="footer-icons">
         {/* GitHub ikona */}
         <a
@@ -37,7 +37,7 @@ const Footer = () => {
       <div className="footer-text">
         © {new Date().getFullYear()} {t("footer.text")}
       </div>
-    </div>
+    </footer>
   );
 };
 

@@ -131,7 +131,7 @@
       width: 25px;
       height: auto;
       color: var(--color-text-muted);
-      transition: color 0.3s ease;
+      transition: color 0.3s ease-out;
 
       &:hover {
         color: var(--color-text-secondary);
