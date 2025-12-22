@@ -4,22 +4,31 @@ import "./ThemeToggle.scss";
 const storageKey = "theme-preference";
 
 const getColorPreference = (): "light" | "dark" => {
-  const stored = localStorage.getItem(storageKey);
-  if (stored === "light" || stored === "dark") {
-    return stored;
+  if (typeof window === "undefined") return "light";
+  try {
+    const stored = window.localStorage.getItem(storageKey);
+    return stored === "dark" || stored === "light" ? stored : "light";
+  } catch {
+    return "light";
   }
-  return "light"; // default light
 };
 
 const initialTheme = getColorPreference();
-document.documentElement.setAttribute("data-theme", initialTheme);
+
+if (typeof document !== "undefined") {
+  document.documentElement.setAttribute("data-theme", initialTheme);
+}
 
 const ThemeToggle = () => {
   const [theme, setTheme] = useState<"light" | "dark">(initialTheme);
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem(storageKey, theme);
+    try {
+      window.localStorage.setItem(storageKey, theme);
+    } catch (error) {
+      if (import.meta.env.DEV) console.warn(error);
+    }
   }, [theme]);
 
   const toggle = () =>

@@ -16,9 +16,6 @@ export default defineConfig({
           @use "@/styles/variables" as *;
           @use "@/styles/mixins" as *;
           @use "@/styles/functions" as *;
-          @use "@/styles/fonts";
-          @use "@/styles/colors";
-          @use "@/styles/typography" as *;
         `,
       },
     },
